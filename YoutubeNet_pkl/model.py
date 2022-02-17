@@ -109,9 +109,9 @@ class Model(object):
 
 
     else:
-        all_emb=tf.concat([item_emb_w,
-                           tf.nn.embedding_lookup(brand_emb_w,brand_list),
-                           tf.nn.embedding_lookup(msort_emb_w,msort_list)],axis=1)
+        a =  tf.nn.embedding_lookup(brand_emb_w,brand_list)
+        b = tf.nn.embedding_lookup(msort_emb_w, msort_list)
+        all_emb=tf.concat([item_emb_w, a, b ],axis=1)
         self.logits=tf.matmul(layer_3,all_emb,transpose_b=True)+item_b
         self.output=tf.nn.softmax(self.logits)
 

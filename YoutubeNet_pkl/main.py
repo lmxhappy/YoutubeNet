@@ -30,6 +30,7 @@ if __name__ == '__main__':
         msort_list = pickle.load(f)
         user_count, item_count, brand_count, msort_count = pickle.load(f)
         item_key, brand_key, msort_key, user_key = pickle.load(f)
+
     print('user_count: %d\titem_count: %d\tbrand_count: %d\tmsort_count: %d' %
           (user_count, item_count, brand_count, msort_count))
 

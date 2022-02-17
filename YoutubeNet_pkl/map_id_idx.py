@@ -6,7 +6,8 @@ import time
 
 start_time=time.time()
 
-PATH_TO_DATA='./data/click_brand_msort_data_20180415.txt'
+# PATH_TO_DATA='./data/click_brand_msort_data_20180415.txt'
+PATH_TO_DATA='./data/a'
 data = pd.read_csv(PATH_TO_DATA, sep='\t',header=None)
 data.columns=['UId','ItemId','BrandId','MiddlesortId','ClickTime','Date']
 data=data[['UId','ItemId','BrandId','MiddlesortId','ClickTime']]
